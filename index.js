@@ -11,7 +11,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req, res) => {
+  res.redirect('https://aat.org.uk');
+});
+
+app.get('/:page', function (req, res) {
   console.log('log:: GET something other than base');
+  console.log('retrieving page: ' + req.params.page);
   res.redirect('https://aat.org.uk');
 });
 
