@@ -10,10 +10,6 @@ app.get('/', (req, res) => {
   res.send('This is a Node.js API running on EC2: GET /');
 });
 
-app.get('*', (req, res) => {
-  res.redirect('https://aat.org.uk');
-});
-
 app.get('/:page', function (req, res) {
   console.log('log:: GET something other than base');
   console.log('retrieving page: ' + req.params.page);
