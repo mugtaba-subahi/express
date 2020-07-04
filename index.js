@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
   res.send('This is a Node.js API running on EC2: GET /');
 });
 
-app.get('/skill-store-test', (req, res) => {
-  console.log('log:: GET /skill-store-test');
-  res.send('This is a Node.js API running on EC2: GET /skill-store-test');
+app.get('*', (req, res) => {
+  console.log('log:: GET something other than base');
+  res.redirect('http://google.com');
 });
 
 app.listen(80, () => {
