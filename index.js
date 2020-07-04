@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('*', (req, res) => {
   console.log('log:: GET something other than base');
-  res.redirect('http://google.com');
+  res.redirect('https://aat.org.uk');
 });
 
 app.listen(80, () => {
